@@ -10,7 +10,8 @@ namespace Lab13_Student_Enrollment.Data
     {
         public Lab13_Student_EnrollementDbContext(DbContextOptions<Lab13_Student_EnrollementDbContext> options) : base(options)
         {
-
         }
+        public DbSet<Models.Course
+            > Course { get; set; }
     }
 }

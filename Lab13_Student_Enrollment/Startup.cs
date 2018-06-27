@@ -27,7 +27,7 @@ namespace Lab13_Student_Enrollment
         {
             services.AddMvc();
 
-            services.AddDbContext<Lab13_Student_EnrollementDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<Lab13_Student_EnrollementDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProductionConnection")));
 
         }
 
@@ -35,6 +35,17 @@ namespace Lab13_Student_Enrollment
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseMvc(route =>
+                {
+                    route.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
+                });
+            }
+
+            if (env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMvc(route =>

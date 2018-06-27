@@ -1,0 +1,27 @@
+﻿@model Lab13_Student_Enrollment.Models.CourseTitleViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Course List</h2>
+
+
+<table>
+    @foreach (var item in Model.Courses)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Instructor</td>
+            <td>@item.StartDate</td>
+        </tr>
+    }
+</table>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Return to Home</a>
+</div>
+
+
+

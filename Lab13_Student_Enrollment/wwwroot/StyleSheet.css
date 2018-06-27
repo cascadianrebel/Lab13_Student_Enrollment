@@ -1,0 +1,33 @@
+﻿header{
+    background-color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 25px 25px;
+}
+
+body {
+    
+    background-color: lightgray;
+    height: 100%;
+    text-align: center;
+}
+
+div{
+    border: 1px solid blue;
+    padding: 2em;
+    vertical-align: middle;
+    width: auto;
+}
+
+table{
+    display: table;
+    vertical-align: middle;
+}
+
+a {
+    border: 2px;
+    border-color: darkslategrey;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2em;
+}
+
+
